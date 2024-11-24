@@ -1,0 +1,123 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*  apply a natural box layout model to all elements  */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+}
+
+header h1 {
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    background-color: rgb(224, 224, 236);
+
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(175, 175, 175);
+    padding: 1rem 2vw;
+}
+
+nav button {
+    background:rgb(118, 120, 154);
+    border: 1px solid rgb(0, 0, 0);
+    color: white;
+    padding: .9rem 2rem;
+    box-shadow: 5px 5px 10px rgb(46, 46, 46);
+    border-radius: 10px;
+    margin: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+nav button:hover {
+    transform: translateY(-5px) scale(1.05); /* Moves slightly upward and enlarges */
+    box-shadow: 8px 8px 15px rgb(46, 46, 46); /* Enhances the shadow effect */
+}
+
+#allCards {
+    display: grid;
+    grid-template-columns: 1fr; /* Default: One card per row */
+    gap: 1.5rem; /* Increased spacing between cards */
+    justify-items: center; /* Center-align cards */
+}
+
+#allCards figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px; /* Make the cards wider */
+    border: 1px solid #ccc;
+    padding: 1.5rem; /* Increased padding for larger cards */
+    margin: 1rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling */
+}
+
+
+#allCards figure.republican {
+    border: solid 2px rgb(175, 28, 28); /* Red outline for Republicans */
+    color: rgb(175, 28, 28); /* Optional text color */
+}
+
+#allCards figure.democrat {
+    border: solid 2px rgb(35, 64, 179); /* Blue outline for Democrats */
+    color: rgb(35, 64, 179); /* Optional text color */
+}
+
+#allCards img {
+    width: 100%;
+    border-radius: 0;
+}
+
+#allCards figcaption {
+    text-align: center;
+}
+
+/* Style for the name above the image */
+.name-div {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Style for the figure (overall card layout) */
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the phone button */
+.phone-button {
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #000000;
+    border: 2px solid #4d4d4d;
+    background-color: rgb(223, 223, 223);
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Button hover effect */
+.phone-button:hover {
+    background-color: #8c8c8c;
+    color: white;
+}
